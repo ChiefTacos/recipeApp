@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-mongoose.set('strictQuery', false);
 import connect from "@/utils/db";
 import Post from "@/models/Post";
 
