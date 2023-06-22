@@ -12,13 +12,14 @@ console.log('first')
     await connect();
 
     const posts = await Post.find(username && { username });
-
+    console.log('second')
     return new NextResponse(JSON.stringify(posts), { status: 200 });
-console.log('second')
+
 
   } catch (err) {
+    console.log('third')
     return new NextResponse("Database Error", { status: 500 });
-console.log('third')
+
 
   }
 };
