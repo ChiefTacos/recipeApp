@@ -51,7 +51,7 @@ const handler = NextAuth({
   pages: {
     error: "/dashboard/login",
   },
-
+  secret: process.env.SECRET //SECRET ENV VARIABLE
 });
 
-export { handler as GET, handler as POST };
+export default handler;
