@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-// import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import User from "@/models/User";
@@ -35,7 +34,8 @@ const handler = NextAuth({
             throw new Error("User not found!");
           }
         } catch (err) {
-          throw new Error(err);
+          throw new Error(err)
+          console.log('right here baby');
         }
       },
     }),
