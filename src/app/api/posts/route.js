@@ -4,14 +4,14 @@ import Post from "@/models/Post";
 
 export const GET = async (request) => {
 
-  // const url = new URL(request.url);
+  const url = new URL(request.url);
 
-  //  const username = url.searchParams.get("username");
+   const username = url.searchParams.get("username");
 console.log('first')
   try {
     await connect();
-    // username && { username }
-    const posts = await Post.find();
+    
+    const posts = await Post.find(username && { username });
     console.log('second')
     return new NextResponse(JSON.stringify(posts), { status: 200 });
 
