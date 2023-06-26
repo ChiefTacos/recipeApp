@@ -10,8 +10,8 @@ export const GET = async (request) => {
 console.log('first')
   try {
     await connect();
-
-    const posts = await Post.find(username && { username });
+    // username && { username }
+    const posts = await Post.find();
     console.log('second')
     return new NextResponse(JSON.stringify(posts), { status: 200 });
 
