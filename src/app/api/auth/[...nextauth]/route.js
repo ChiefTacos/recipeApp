@@ -35,7 +35,7 @@ const handler = NextAuth({
           }
         } catch (err) {
           throw new Error(err)
-          console.log('right here baby');
+         
         }
       },
     }),
@@ -50,6 +50,8 @@ const handler = NextAuth({
   ],
   pages: {
     error: "/dashboard/login",
+    login: "/dashboard/login",
+
   },
   secret: process.env.SECRET //SECRET ENV VARIABLE
 });
