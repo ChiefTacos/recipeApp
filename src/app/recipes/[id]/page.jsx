@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getData(id) {
-  const res = await fetch(`https://www.sirmur.com/api/posts/${id}`, {
+  const res = await fetch(`https://recipe-rayev496h-chieftacos.vercel.app/api/posts/${id}`, {
     cache: "no-store",
   });
 
