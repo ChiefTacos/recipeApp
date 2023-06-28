@@ -27,7 +27,12 @@ export async function generateMetadata({ params }) {
 
 const RecipePost = async ({ params }) => {
   const data = await getData(params.id);
-  const formattedContent = data.content.replace(/\n/g, "<br>");
+  const formattedContent = data.content.split("\n").map((paragraph, index) => (
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
 
   return (
     <div className={styles.container}>
