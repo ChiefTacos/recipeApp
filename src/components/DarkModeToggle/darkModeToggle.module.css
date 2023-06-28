@@ -16,9 +16,14 @@
 }
 
 .ball{
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background-color: #4000ff;
   border-radius: 50%;
   position: absolute;
+}
+@media (max-width: 825px) {
+  .container {
+    padding: 2.5px;
+  }
 }

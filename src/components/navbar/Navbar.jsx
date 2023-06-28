@@ -5,6 +5,7 @@ import React from "react";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
+import { useState } from "react";
 
 const links = [
   {
@@ -38,30 +39,67 @@ const links = [
     url: "/dashboard",
   },
 ];
-
 const Navbar = () => {
   const session = useSession();
+  const [isVerticalList, setIsVerticalList] = useState(false);
+
+  const toggleListDisplay = () => {
+    setIsVerticalList(!isVerticalList);
+  };
 
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
         sirmur
       </Link>
-      <div className={styles.links}>
+      <div className={`${styles.links} ${isVerticalList ? styles.vertical : ''}`}>
         <DarkModeToggle />
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}
           </Link>
         ))}
-        {session.status === "authenticated" && (
+        {session.status === 'authenticated' && (
           <button className={styles.logout} onClick={signOut}>
             Logout
           </button>
         )}
       </div>
+      <button className={styles.toggleButton} onClick={toggleListDisplay}>
+        Toggle List
+      </button>
     </div>
   );
 };
 
 export default Navbar;
+
+// old navbar
+
+
+// const Navbar = () => {
+//   const session = useSession();
+
+//   return (
+//     <div className={styles.container}>
+//       <Link href="/" className={styles.logo}>
+//         sirmur
+//       </Link>
+//       <div className={styles.links}>
+//         <DarkModeToggle />
+//         {links.map((link) => (
+//           <Link key={link.id} href={link.url} className={styles.link}>
+//             {link.title}
+//           </Link>
+//         ))}
+//         {session.status === "authenticated" && (
+//           <button className={styles.logout} onClick={signOut}>
+//             Logout
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Navbar;
