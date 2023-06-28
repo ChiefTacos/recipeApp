@@ -27,6 +27,8 @@ export async function generateMetadata({ params }) {
 
 const RecipePost = async ({ params }) => {
   const data = await getData(params.id);
+  const formattedContent = data.content.replace(/\n/g, "<br>");
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -57,7 +59,7 @@ const RecipePost = async ({ params }) => {
       </div>
       <div className={styles.content}>
         <p className={styles.text}>
-         {data.content}
+        {formattedContent}
         </p>
       </div>
     </div>
