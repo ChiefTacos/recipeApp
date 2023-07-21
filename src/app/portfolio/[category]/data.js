@@ -1,3 +1,4 @@
+
 export const items = {
   personal: [
     {
@@ -11,43 +12,43 @@ export const items = {
     {
       id: 2,
       title: "Out of this World Thinking",
-      desc: "I spent too much time having fun learning about in Blender, that I didn't think through how I would actually transfer all those models and textures into the ThreeJS engine.",
+      desc: "I spent too much time having fun learning about in Blender, that I didn't think through how I would actually transfer all those models and textures into the ThreeJS engine. I seek to add touches of 3D in my static web pages without sacrificing fluidity.",
       image:
-      "https://images.pexels.com/photos/2916450/pexels-photo-2916450.jpeg",  
+      "https://i.ibb.co/zGBhHCG/transfer02.jpg",  
       link: "",
     },
     {
       id: 3,
-      title: "Strong Together Charity",
-      desc: "Being my first main portfolio piece ever, I wanted to show off a bit about my personal side and my intriguing technical skills. I will continue to develop web apps for 3D and work on my design skills since I truly enjoy it as a hobby. Also I strongly see AR/VR development and 3D design being very prominent in the near future.",
+      title: "Hungry To Learn",
+      desc: "Being my first main portfolio piece ever, I wanted to show off a bit about my personal side and my intriguing technical skills. I will continue to develop web apps for 3D and work on my design skills since I truly enjoy it as a hobby. Also I strongly see AR/VR development and 3D design being a very important factor in the future for web development.",
       image:
-        "https://images.pexels.com/photos/2916450/pexels-photo-2916450.jpeg",
+        "https://i.ibb.co/LYPLBxG/paradise.jpg",
         link: "",
     }
   ],
   renders: [
     {
       id: 1,
-      title: "Creative Portfolio",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vel tenetur necessitatibus unde natus perspiciatis, amet cupiditate ducimus possimus, eaque ex autem id nobis eum dolorem. Neque eveniet fugiat tenetur?",
+      title: "Mikey",
+      desc: "In order to make this incredible looking teddy bear specially modeled to look like my childhood best-friend, I used the help of a YouTube video to get the fur perfect with geometry nodes. I modeled the bear myself and took the settings needed to create this beauty. The background image is some random photo I found in order to add more realism.",
       image:
-        "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg",
+        "https://i.ibb.co/bJ0LP58/teddy-Close.png",
         link: "",
     },
     {
       id: 4,
-      title: "Minimal Single Product",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vel tenetur necessitatibus unde natus perspiciatis, amet cupiditate ducimus possimus, eaque ex autem id nobis eum dolorem. Neque eveniet fugiat tenetur?",
+      title: "Worldwide Globe",
+      desc: "This showcases my ability to create perfect infinite loop videos. The lighting in this scene allows for a nice light show.",
       image:
         "https://images.pexels.com/photos/2103127/pexels-photo-2103127.jpeg",
         link: "",
     },
     {
       id: 3,
-      title: "Strong Together Charity",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur vel tenetur necessitatibus unde natus perspiciatis, amet cupiditate ducimus possimus, eaque ex autem id nobis eum dolorem. Neque eveniet fugiat tenetur?",
+      title: "Big Picture",
+      desc: "My original idea for my first portfolio project was to make a website that starts with a nice view of my low-poly world. Then transitions to my detailed room showcasing more about me. That was ambitious to say the least. I enjoy 3D design so much since you can create pretty much anything you think of.",
       image:
-        "https://images.pexels.com/photos/2916450/pexels-photo-2916450.jpeg",
+        "https://i.ibb.co/Sm674nj/0110.png",
         link: "",
     }
   ],
