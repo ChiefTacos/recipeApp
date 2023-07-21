@@ -55,6 +55,8 @@ text-decoration: overline;
 @media only screen and (max-width: 767px) {
   .item {
     flex-direction: column;
+      margin-top: 0px;
+
   }
   .imgContainer {
     display: none;

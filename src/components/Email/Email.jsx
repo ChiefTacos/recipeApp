@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 const Email = () => {
   const form = useRef();
   const [error, setError] = useState("");
+  const [isFormSubmitted, setFormSubmitted] = useState(false); // State for form submission
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,12 +18,16 @@ const Email = () => {
           "service_m96v23q",
           "template_9pogljk",
           form.current,
-          "MHyRyvsumJhdD2qbi"
+          "MHyRyvsumJhdD2qbi",
+
         )
+        
         .then(
           (result) => {
+            e.target.classList.add(styles.buttonPressed);
             console.log(result.text);
             console.log("message sent");
+            setFormSubmitted(true); // Set the formSubmitted state to true on successful submission
           },
           (error) => {
             console.log(error.text);
@@ -55,6 +60,11 @@ const Email = () => {
         <label>Message</label>
         <textarea name="message" className={styles.input} id={styles.text}/>
         <input type="submit" value="Send" className={styles.button} />
+        {isFormSubmitted && (
+          <p className={styles.successMessage}>
+            Your message has been successfully sent!
+          </p>
+        )}
         {error && <div className={styles.errorText}>{error}</div>}
       </form>
    

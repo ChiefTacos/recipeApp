@@ -2,9 +2,11 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
-
+.mainContainer {
+  margin: 50px 0px 0px 0px;
+}
 .image{
   object-fit: cover;
 }
@@ -19,4 +21,22 @@
 .desc{
   font-size: 18px;
   color: #999;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .mainContainer {
+    margin: 20px 0px 0px 0px;
+  }
+  .imageContainer {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
 }

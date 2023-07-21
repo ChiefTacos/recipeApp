@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 async function getData() {
   const res = await fetch("https://www.sirmur.com/api/posts", {
@@ -9,7 +10,8 @@ async function getData() {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    // throw new Error("Failed to fetch data");
+    return notFound();
   }
 
   return res.json();

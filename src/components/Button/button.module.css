@@ -1,9 +1,15 @@
 .container {
   padding: 20px;
   cursor: pointer;
-  background-image: linear-gradient(to left, #6653c2, #ff6b6b);
-  border: none;
-  border-radius: 5px;
-  width: max-content;
-  color: white;
-}
+    background-image: linear-gradient(to left, #6653c2, #ff6b6b);
+    border: none;
+    border-radius: 5px;
+    width: max-content;
+    color: white;
+    transition: transform 0.2s ease-in-out; /* Add a transition for the transform property */
+  }
+  
+  .container:active {
+    transform: scale(0.95); /* Add a scale transform when the button is pressed */
+  }
+ 
