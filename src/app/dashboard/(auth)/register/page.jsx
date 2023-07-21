@@ -58,12 +58,15 @@ const Register = () => {
           className={styles.input}
         />
         <button className={styles.button}>Register</button>
+        
         {error && "Something went wrong!"}
+
       </form>
       <span className={styles.or}>- OR -</span>
       <Link className={styles.link} href="/dashboard/login">
         Login with an existing account
       </Link>
+      <h2 className={styles.contactme}>Contact my email if you have login issues!</h2>
     </div>
   );
 };

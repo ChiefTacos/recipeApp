@@ -70,6 +70,8 @@ const Login = ({ url }) => {
       <Link className={styles.link} href="/dashboard/register">
         Create new account
       </Link>
+      <h2 className={styles.contactme}>Contact my email if you have login issues!</h2>
+
       {/* <button
         onClick={() => {
           signIn("github");

@@ -5,7 +5,7 @@
   flex-direction: column;
   width: fit-content;
   font-size: 16px;
-  max-width: 40%;
+  max-width: 100%;
 
   }
   
@@ -61,7 +61,25 @@
     margin-top: 5px;
     text-align: center;
   }
-
+  @media (max-width: 399px) {
+    .form {
+      max-width: 50%; /* Add this line to limit the width of the form to 50% of the screen */
+    }
+    .textArea,
+    #text {
+    font-weight: lighter;
+      width: 215px;
+      font-size: 14px;
+      height: 100px;
+    }
+  }
+  .input,
+  .textArea {
+   width:215px;
+   border: 2px solid #bbb;
+   font-size: 15px;
+   font-weight: bold;
+  }
   /* form {
     display: flex;
     align-items: flex-start;

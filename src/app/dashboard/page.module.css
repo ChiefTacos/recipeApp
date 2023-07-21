@@ -12,12 +12,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 50px 0px;
+  
 }
 
 .imgContainer {
   width: 200px;
   height: 100px;
-  position: Ū;
+  position: relative;
 }
 
 .img {
@@ -55,4 +56,34 @@
   border-radius: 5px;
   color: #eee;
   font-weight: bold;
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Stacking elements vertically */
+    gap: 20px; /* Reducing the gap between elements */
+  }
+
+  .posts {
+    order: 2; /* Placing .posts after .new in the stacking order */
+    
+  }
+
+  .new {
+    order: 1; /* Placing .new before .posts in the stacking order */
+  }
+  .post {
+    align-items: flex-start; /* Align elements to the left */
+    margin: 20px 0px 0px 0px; /* Reduce the vertical margin */
+    flex-direction: column; /* Change the direction to column */
+    align-items: center; 
+  }
+
+  .postContent {
+    width: 100%; /* Take the full width */
+    padding: 20px 20px; /* Add horizontal padding for spacing */
+  }
+
+  .postTitle {
+    margin: 30px 0px 10px 0px; /* Add vertical margin between title and delete */
+  }
 }

@@ -1,4 +1,6 @@
 .container {
+  padding: 20px;
+
 }
 
 .title {
@@ -11,6 +13,8 @@
   display: flex;
   align-items: center;
   gap: 100px;
+  max-width: 100%; /* Add this line to limit the width */
+
 }
 
 .imgContainer {
@@ -21,7 +25,7 @@
 
 .image {
   object-fit: contain;
-  /* animation: move 3s infinite ease alternate; */
+  animation: move 3s infinite ease alternate;
 }
 
 @keyframes move {
@@ -59,4 +63,35 @@
   border-radius: 5px;
   width: max-content;
   color: white;
+}
+
+@media (max-width: 725px) {
+  
+
+  
+  .imgContainer {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 724px) {
+  .content {
+    /* flex-direction: column;
+    align-items: center; */
+    gap:0;
+  }
+
+  
+  .imgContainer {
+  display: none; 
+  }
+}
+@media (max-width: 399px) {
+  .content {
+    /* flex-direction: column;
+    align-items: center; */
+    gap:0;
+  }
 }

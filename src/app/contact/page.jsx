@@ -12,11 +12,11 @@ const Contact = async () =>{
   
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Lets Keep in Touch</h1>
+      <h1 className={styles.title}>Let's Connect</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
-            src="/contact.png"
+            src="/face.png"
             alt=""
             fill={true}
             className={styles.image}

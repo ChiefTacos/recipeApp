@@ -11,9 +11,10 @@
   gap: 50px;
 }
 
+
 .title {
   font-size: 72px;
-  background: linear-gradient(to bottom, #44e396, #bbb);
+  background: linear-gradient(to bottom, #e38644, #cca90f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -22,17 +23,8 @@
   width: 100%;
   height: 500px;
   object-fit: contain;
-  /* animation: move 3s infinite ease alternate; */
 }
 
-@keyframes move {
-  from {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(10px);
-  }
-}
 
 
 .desc {
@@ -40,3 +32,8 @@
   font-weight: 300;
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 60px; /* Adjust the font-size for mobile view */
+  }
+}

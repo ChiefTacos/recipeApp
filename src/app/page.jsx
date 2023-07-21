@@ -1,8 +1,9 @@
 "use client"
 import Image from "next/image";
 import styles from "./page.module.css";
-import Hero from "public/hero.png";
+import Oranges from "public/oranges.svg";
 import Button from "@/components/Button/Button";
+import Video from "public/videos/video.webm";
 
 export default function Home() {
   return (
@@ -10,15 +11,18 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.item}>
         <h1 className={styles.title}>
-          Boop dee doop dee doop
+        Explore and Share Global Recipes
         </h1>
         <p className={styles.desc}>
-          Lemme tell ya something
+          Click below to get started!
         </p>
-        <Button url="/dashboard" text="Log In"/>
+        <Button  url="/dashboard" text="Log In"/>
       </div>
       <div className={styles.item}>
-        <Image src={Hero} alt="" className={styles.img} />
+        <Image src={Oranges} alt="" className={styles.img} />
+        {/* <video autoPlay muted style={{ width: '500px', height: '500px' }}>
+  <source src="/videos/video.webm" type="video/webm"/>
+</video> */}
       </div>
     </div>
   );

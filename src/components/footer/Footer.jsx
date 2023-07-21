@@ -1,17 +1,33 @@
+// import React from "react";
+// import styles from "./footer.module.css";
+// import Image from "next/image";
+// import World from "public/favicon-32x32.png";
+ 
+// const Footer = () => {
+//   return (
+//     <div className={styles.container}>
+//       <div className={styles.footer}>2023 
+//       <Image src={World} alt="" className={styles.img} />
+
+//          Michael Murray. All rights reserved.</div>
+    
+//     </div>
+//   );
+// };
+
+// export default Footer;
 import React from "react";
 import styles from "./footer.module.css";
 import Image from "next/image";
+import World from "public/favicon-32x32.png";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div>2023 🌎 Michael Murray. All rights reserved.</div>
-      <div className={styles.social}>
-        <a href="https:/www.facebook.com">
-        <Image src="/1.png" width={15} height={15} className={styles.icon} alt="Lama Dev Facebook Account" /></a>
-        <Image src="/2.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
-        <Image src="/3.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
-        <Image src="/4.png" width={15} height={15} className={styles.icon} alt="Lama Dev" />
+      <div className={styles.footer}>
+        <span>2023</span> {/* Wrap the text in a <span> element for better control */}
+        <Image src={World} alt="" className={styles.img} />
+        <span>Michael Murray. All rights reserved.</span> {/* Wrap the text in a <span> element for better control */}
       </div>
     </div>
   );
