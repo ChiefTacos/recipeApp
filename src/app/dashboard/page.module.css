@@ -93,6 +93,10 @@ color:red;  }
   color: #eee;
   font-weight: bold;
 }
+.postTitle {
+  text-align: center;
+  margin: 0px 0px 0px 0px; /* Add vertical margin between title and delete */
+}
 @media (max-width: 600px) {
   .container {
     flex-direction: column; /* Stacking elements vertically */

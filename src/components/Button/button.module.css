@@ -1,12 +1,16 @@
 .container {
-  padding: 20px;
+  padding: 25px 20px 25px 20px;
   cursor: pointer;
     background-image: linear-gradient(to left, #6653c2, #ff6b6b);
     border: none;
     border-radius: 5px;
     width: max-content;
     color: white;
-    transition: transform 0.2s ease-in-out; /* Add a transition for the transform property */
+    transition: transform 0.2s ease-in-out; 
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+
   }
   
   .container:active {
