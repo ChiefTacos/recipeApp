@@ -9,6 +9,8 @@
   padding: 2px;
   position: relative;
   cursor: pointer;
+  
+
 }
 
 .icon{
@@ -25,5 +27,6 @@
 @media (max-width: 825px) {
   .container {
     padding: 2.5px;
+    margin-bottom:15px;
   }
 }

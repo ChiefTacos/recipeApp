@@ -7,9 +7,7 @@
 .mainContainer {
   margin: 50px 0px 0px 0px;
 }
-.image{
-  object-fit: cover;
-}
+
 
 .content {
 }
@@ -22,6 +20,16 @@
   font-size: 18px;
   color: #999;
 }
+.mainHeader {
+  text-decoration:underline;
+  text-align: center;
+  padding: 20px 0px 60px 0px;
+}
+.mainSubheader {
+  text-align: center;
+  padding: 0px 0px 60px 0px;
+}
+
 @media (max-width: 767px) {
   .container {
     flex-direction: column-reverse;
@@ -38,5 +46,13 @@
 
   .content {
     order: 1;
+  }
+  .mainHeader {
+    padding: 0px 0px 30px 0px;
+    margin-top: -10px;
+  }
+  .mainSubheader {
+    text-align: center;
+    padding: 0px 0px 30px 0px;
   }
 }

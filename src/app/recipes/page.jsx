@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-
 async function getData() {
   const res = await fetch("https://www.sirmur.com/api/posts", {
     cache: "no-store",
@@ -21,6 +20,8 @@ const Recipes = async () => {
   const data = await getData();
   return (
     <div className={styles.mainContainer}>
+      <h1 className={styles.mainHeader}>World Class Cuisines and Pastries</h1>
+      <h3 className={styles.mainSubheader}>Feel free to add as many different recipes as you want! </h3>
       {data.map((item) => (
         <Link href={`/recipes/${item._id}`} className={styles.container} key={item.id}>
           <div className={styles.imageContainer}>

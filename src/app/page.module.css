@@ -32,6 +32,7 @@
   font-weight: 300;
 }
 
+
 @media (max-width: 600px) {
   .title {
     font-size: 60px; /* Adjust the font-size for mobile view */
