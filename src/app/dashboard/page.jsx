@@ -5,15 +5,13 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { ArrowBigDown } from "lucide-react";
 
 const Dashboard = () => {
-
-
-
   const session = useSession();
 
   const router = useRouter();
-  
+
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
   const { data, mutate, error, isLoading } = useSWR(
@@ -48,7 +46,7 @@ const Dashboard = () => {
         }),
       });
       mutate();
-      e.target.reset()
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
@@ -74,8 +72,16 @@ const Dashboard = () => {
             : data?.map((post) => (
                 <div className={styles.post} key={post._id}>
                   <div className={styles.imgContainer}>
-                    <Image src={post.img.startsWith("https://") ? post.img : "https://www.cvent-assets.com/brand-page-guestside-site/assets/images/venue-card-placeholder.png"}
- alt="" width={200} height={120} />
+                    <Image
+                      src={
+                        post.img.startsWith("https://images.pexels.com/")
+                          ? post.img
+                          : "/public/venue-card-placeholder.png"
+                      }
+                      alt=""
+                      width={200}
+                      height={120}
+                    />
                   </div>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <span
@@ -88,12 +94,25 @@ const Dashboard = () => {
               ))}
         </div>
         <form className={styles.new} onSubmit={handleSubmit}>
-          <h1>Add New Post</h1>
-          <input type="text" placeholder="Title" className={styles.input} />
-          <input type="text" placeholder="Desc" className={styles.input} />
-          <input type="text" placeholder="Image" className={styles.input} />
+          <div className={styles.heading}>
+            <h1 className={styles.newPost}>Add New Posts</h1>
+            <br />
+
+            <ArrowBigDown className={styles.arrowBigDown}/>
+            <br />          <br />
+            <br />
+
+            <h2 className={styles.subHeading}>
+              MAKE SURE TO USE THIS WEBSITE WHEN IMPORTING IMAGES!!
+            </h2>
+            <a className={styles.imageLink} href="https://www.pexels.com/" target="_blank"><p>https://www.pexels.com/</p></a>
+          </div>
+          <input type="text" placeholder="Title for Recipe" className={styles.input} />
+          <input type="text" placeholder="Short Description" className={styles.input} />
+          <input type="text" placeholder="Image URL (starts with https://images.pexels.com)" className={styles.input} />
+
           <textarea
-            placeholder="Content"
+            placeholder="Provide Your Full Recipes Here:"
             className={styles.textArea}
             cols="30"
             rows="10"

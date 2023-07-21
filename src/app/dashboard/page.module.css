@@ -6,15 +6,47 @@
 .posts {
   flex: 1;
 }
+.imageLink {
+  text-decoration: underline;
+  animation-name: fadeInOut;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 
+/* Define the animation keyframes */
+@keyframes fadeInOut {
+  0%, 100% {
+color:red;  }
+  50% {
+    color: black;
+  }
+}
 .post {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px 0px;
-  
 }
-
+.heading {
+  text-align: center;
+  align-content: center;
+ 
+}
+.arrowBigDown {
+  animation-name: moveUpDown;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Adjust the value to control the distance of the movement */
+  }
+}
 .imgContainer {
   width: 200px;
   height: 100px;
@@ -36,7 +68,9 @@
   flex-direction: column;
   gap: 20px;
 }
-
+.subHeading {
+  font-size: 30px;
+}
 .input,
 .textArea {
   padding: 10px;
@@ -47,7 +81,9 @@
   font-size: 20px;
   font-weight: bold;
 }
-
+.newPost {
+  font-size: 80px;
+}
 .button {
   padding: 20px;
   cursor: pointer;
@@ -65,7 +101,6 @@
 
   .posts {
     order: 2; /* Placing .posts after .new in the stacking order */
-    
   }
 
   .new {
@@ -75,7 +110,7 @@
     align-items: flex-start; /* Align elements to the left */
     margin: 20px 0px 0px 0px; /* Reduce the vertical margin */
     flex-direction: column; /* Change the direction to column */
-    align-items: center; 
+    align-items: center;
   }
 
   .postContent {
