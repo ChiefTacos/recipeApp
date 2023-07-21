@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Hero from "public/hero02.jpeg";
 import Button from "@/components/Button/Button";
 import Link from "next/link"; 
+import Hero2 from "public/videos/giphy.gif";
 
 // import Video from "public/videos/video.webm";
 
@@ -20,14 +21,20 @@ export default function Home() {
         Explore and 
         Share 🔥 Recipes
         </h1>
-</Link>        
+      </Link>        
         <p className={styles.desc}>
           Click below to get started!
         </p>
-        <Button  url="/dashboard" text="Log In"/>
+        
+          <Button  url="/dashboard" text="Log In"/>
       </div>
       <div className={styles.item}>
-        <Image src={Hero} alt="" className={styles.img}  />
+      <Image
+      className={styles.imgMobile}
+      src={Hero2}
+      alt=""
+    />
+        <Image src={Hero} alt="" className={styles.imgDesktop}  />
         
       </div>
     </div>

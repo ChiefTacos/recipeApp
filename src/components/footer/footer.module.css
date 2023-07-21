@@ -19,10 +19,11 @@ margin-top: 20px;
 }
 
 .footer {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
 }
 
 

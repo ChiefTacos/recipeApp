@@ -49,6 +49,7 @@ const Navbar = () => {
     setIsVerticalList(!isVerticalList);
   };
 
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
