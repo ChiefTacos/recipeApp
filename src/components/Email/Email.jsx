@@ -49,9 +49,9 @@ const Email = () => {
     
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <label>Name</label>
-        <input type="text" name="user_name" className={styles.input}/>
+        <input type="text" name="user_name" className={styles.input} id={styles.text}/>
         <label>Email</label>
-        <input type="email" name="user_email" className={styles.input}/>
+        <input type="email" name="user_email" className={styles.input} id={styles.text}/>
         <label>Message</label>
         <textarea name="message" className={styles.input} id={styles.text}/>
         <input type="submit" value="Send" className={styles.button} />

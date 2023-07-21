@@ -43,7 +43,8 @@
     font-size: 20px;
     font-weight: bold;
     max-height: 300px;
-    width: 315px;
+    width: 280px;
+    min-width: 250px;
   }
   
   .container {
@@ -54,7 +55,20 @@
     border-radius: 5px;
     width: max-content;
     color: white;
+    
   }
+  .button {
+    padding: 20px;
+    margin-top: 20px;
+  cursor: pointer;
+  background-image: linear-gradient(to left, #6653c2, #ff6b6b);
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  color: white;
+  
+}
+
   .errorText {
     color: red;
     font-size: 24px;
@@ -68,7 +82,7 @@
     .textArea,
     #text {
     font-weight: lighter;
-      width: 215px;
+      width: 280px;
       font-size: 14px;
       height: 100px;
     }

@@ -7,7 +7,6 @@ import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { signOut, useSession } from "next-auth/react";
 import { useState } from "react";
 import Hero from "public/hero.png";
-import { AiOutlineSmallDash } from "react-icons/ai";
 import { AlignJustify } from 'lucide-react';
 
 const links = [
@@ -71,7 +70,6 @@ const Navbar = () => {
       </div>
 
       <button className={styles.toggleButton} onClick={toggleListDisplay}>
-      {/* <AiOutlineSmallDash /> */}
       <AlignJustify color="#ff0000" strokeWidth={3} />
       </button>
     </div>

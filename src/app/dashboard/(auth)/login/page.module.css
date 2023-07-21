@@ -54,8 +54,10 @@
 }
 
 .link {
+  margin-top: -10px;
   text-decoration: underline;
   color: #7d7c7c;
+  font-size: 20px;
 }
 
 .link:hover {

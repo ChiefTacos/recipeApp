@@ -19,7 +19,7 @@ const getData = (cat) => {
 const Category = ({ params }) => {
   const data = getData(params.category);
   return (
-    <div className={styles.container}><Link href="https://www.sirmur.com/">
+    <div className={styles.container}><Link target="_blank" href="https://portfolio-six-pi-54.vercel.app/">
       <h1 className={styles.catTitle}>{params.category} <p className={styles.catTitlelink}>CLICK HERE FOR A LINK TO MY PORTFOLIO SITE</p></h1></Link>
 
       {data.map((item) => (
